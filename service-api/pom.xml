@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.nierbeck.javaland</groupId>
+		<artifactId>Microservices</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>service-api</artifactId>
+	<packaging>bundle</packaging>
+	<name>JavaLand - Microservices - ServiceAPI</name>
+	<description>Module contianing the service API</description>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.5.3</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Import-Package>
+							*
+						</Import-Package>
+						<Export-Package>*</Export-Package>
+					</instructions>
+				</configuration>
+				<executions>
+					<execution>
+						<id>bundle</id>
+						<goals>
+							<goal>bundle</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>baseline</id>
+						<goals>
+							<goal>baseline</goal>
+						</goals>
+						<configuration>
+							<comparisonVersion>${comparison.version}</comparisonVersion>
+							<failOnWarning>false</failOnWarning>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>de.nierbeck.javaland.tools</groupId>
+				<artifactId>karaf-deployer-maven-plugin</artifactId>
+				<configuration>
+					<url>http://192.168.59.103:8181/jolokia/</url>
+					<jsonInstall>
+{
+"type":"EXEC",
+"mbean":"org.apache.karaf:type=bundle,name=root",
+"operation":"install(java.lang.String,boolean)",
+"arguments":["mvn:${project.groupId}/${project.artifactId}/${project.version}", true]
+}
+					</jsonInstall>
+					<user>karaf</user>
+					<password>karaf</password>
+					<skip>false</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
