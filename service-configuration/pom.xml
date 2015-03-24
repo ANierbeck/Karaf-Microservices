@@ -41,16 +41,11 @@
 					<instructions>
 						<_dsannotations>*</_dsannotations>
 						<Import-Package>
-							!org.apache.commons.lang3.*,
 							*
 						</Import-Package>
 						<Export-Package>
 							!*
 						</Export-Package>
-						<Private-Package>
-							${project.groupId}.impl.calc,
-							org.apache.commons.lang3
-						</Private-Package>
 					</instructions>
 				</configuration>
 				<executions>
@@ -94,4 +89,5 @@
 		</plugins>
 	</build>
 
+	<packaging>bundle</packaging>
 </project>

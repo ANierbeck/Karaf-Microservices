@@ -1,4 +1,4 @@
-package de.codecentric.javaland.proxy;
+package de.nierbeck.javaland.proxy;
 
 import java.util.List;
 

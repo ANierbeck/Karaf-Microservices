@@ -7,7 +7,7 @@
              http://cxf.apache.org/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd
              ">
 
-	<reference-list id="creditServices" interface="de.codecentric.javaland.calculator.CreditCalculator" />
+	<reference-list id="creditServices" interface="de.nierbeck.javaland.calculator.CreditCalculator" />
 
 	<cxf:bus>
 		<cxf:features>
