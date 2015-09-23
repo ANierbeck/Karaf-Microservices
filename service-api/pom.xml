@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>de.nierbeck.javaland</groupId>
-		<artifactId>Microservices</artifactId>
+		<groupId>de.nierbeck.microservices.karaf</groupId>
+		<artifactId>Karaf-Microservices</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>service-api</artifactId>
 	<packaging>bundle</packaging>
-	<name>JavaLand - Microservices - ServiceAPI</name>
+	<name>Karaf - Microservices - ServiceAPI</name>
 	<description>Module contianing the service API</description>
 
 	<build>

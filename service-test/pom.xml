@@ -1,23 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>de.nierbeck.javaland</groupId>
-		<artifactId>Microservices</artifactId>
+		<groupId>de.nierbeck.microservices.karaf</groupId>
+		<artifactId>Karaf-Microservices</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>service-test</artifactId>
-	<name>JavaLand - Microservices - integration Tests</name>
+	<name>Karaf - Microservices - integration Tests</name>
 	<description>Integration tests for the Microservices showcase based on Pax Exam</description>
 
 
 
 	<properties>
-		<pax.exam.version>4.4.0</pax.exam.version>
+		<pax.exam.version>4.5.0</pax.exam.version>
 		<pax.url.version>2.1.0</pax.url.version>
 		<logback.version>1.0.4</logback.version>
 		<slf4j.version>1.7.4</slf4j.version>
-		<karaf.version>3.0.3</karaf.version>
+		<karaf.version>4.0.1</karaf.version>
 		<ops4j.base.version>1.5.0</ops4j.base.version>
 		<pax.swissbox.version>1.8.0</pax.swissbox.version>
 	</properties>
@@ -137,7 +137,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>de.nierbeck.javaland.tools</groupId>
+			<groupId>de.nierbeck.microservices.karaf.tools</groupId>
 			<artifactId>Karaf-Service-Runtime</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>

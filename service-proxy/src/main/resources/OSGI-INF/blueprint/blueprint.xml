@@ -7,7 +7,7 @@
              http://cxf.apache.org/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd
              ">
 
-	<reference-list id="creditServices" interface="de.nierbeck.javaland.calculator.CreditCalculator" />
+	<reference-list id="creditServices" interface="de.nierbeck.microservices.karaf.calculator.CreditCalculator" />
 
 	<cxf:bus>
 		<cxf:features>
@@ -21,7 +21,7 @@
 		</jaxrs:serviceBeans>
 	</jaxrs:server>
 
-	<bean id="serviceBean" class="de.nierbeck.javaland.proxy.CalculatorServiceProxy">
+	<bean id="serviceBean" class="de.nierbeck.microservices.karaf.proxy.CalculatorServiceProxy">
 		<property name="creditCalculatorServices" ref="creditServices" />
 	</bean>
 </blueprint>

@@ -21,20 +21,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>Microservices</artifactId>
-        <groupId>de.nierbeck.javaland</groupId>
+        <artifactId>Karaf-Microservices</artifactId>
+        <groupId>de.nierbeck.microservices.karaf</groupId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>service-shell-command</artifactId>
     <packaging>bundle</packaging>
-    <name>JavaLand - Microservices - Shell javaland/calculate Commands</name>
+    <name>Karaf - Microservices - Shell Commands</name>
 
-    <description>Provides the OSGi javaland commands</description>
+    <description>Provides the OSGi microservice commands</description>
     
     <properties>
-    	<karaf.version>3.0.3</karaf.version>
+    	<karaf.version>4.0.1</karaf.version>
     </properties>
 
     <dependencies>

@@ -21,8 +21,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>Microservices</artifactId>
-        <groupId>de.nierbeck.javaland</groupId>
+        <artifactId>Karaf-Microservices</artifactId>
+        <groupId>de.nierbeck.microservices.karaf</groupId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -30,7 +30,7 @@
     <artifactId>service-feature</artifactId>
     <packaging>feature</packaging>
 
-    <name>JavaLand - Microservices - Feature</name>
+    <name>Karaf - Microservices - Feature</name>
     <description>service-feature details</description>
     
     <properties>
