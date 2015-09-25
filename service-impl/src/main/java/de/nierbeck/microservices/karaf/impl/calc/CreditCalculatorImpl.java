@@ -3,13 +3,10 @@ package de.nierbeck.microservices.karaf.impl.calc;
 import java.util.Map;
 
 import org.apache.commons.lang3.Validate;
-import org.ops4j.pax.url.mvn.MavenResolver;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Deactivate;
-import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferencePolicy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,9 +27,6 @@ public class CreditCalculatorImpl implements CreditCalculator {
 	private String institute;
 	private double fee = 500.0; //Fixed Fee of 500
 
-	private MavenResolver resolver;
-	
-	
 	@Activate
 	void activate(Map<String,?> properties) { 
 		LOG.info("Activating "+getClass().getName());
