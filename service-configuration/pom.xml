@@ -71,7 +71,7 @@
 				<groupId>de.nierbeck.javaland.tools</groupId>
 				<artifactId>karaf-deployer-maven-plugin</artifactId>
 				<configuration>
-					<url>http://192.168.59.103:8181/jolokia/</url>
+					<url>http://192.168.99.100:8181/jolokia/</url>
 					<jsonInstall>
 						{
 						"type":"EXEC",

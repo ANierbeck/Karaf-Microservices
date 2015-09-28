@@ -25,7 +25,7 @@ public class ConfigureCredit {
 		
 		try {
 			Configuration configuration = configAdmin
-					.createFactoryConfiguration("de.nierbeck.javaland.calculator");
+					.createFactoryConfiguration("de.nierbeck.microservices.karaf.calculator");
 
 			Dictionary<String, Object> dictionary = configuration.getProperties();
 			if (dictionary == null) {

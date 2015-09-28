@@ -14,7 +14,7 @@ import de.nierbeck.microservices.karaf.calculator.CreditCalculator;
 import de.nierbeck.microservices.karaf.calculator.values.Credit;
 import de.nierbeck.microservices.karaf.command.completer.CreditCalculatorServiceCompleter;
 
-@Command(scope = "javaland", name = "Calculate", description = "Calculates a Credit based on the service")
+@Command(scope = "microservice", name = "Calculate", description = "Calculates a Credit based on the service")
 @Service
 public class Calculate implements Action {
 

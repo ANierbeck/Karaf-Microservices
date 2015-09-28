@@ -93,15 +93,15 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Export-Package>de.codecentric.javaland.command*;version=${project.version}</Export-Package>
-                        <Import-Package>!de.codecentric.javaland.command*,
-                            org.apache.aries.blueprint,
-                            org.osgi.service.blueprint.container,
-                            org.osgi.service.blueprint.reflect,
+                        <Export-Package>de.nierbeck.microservices.karaf.command*;version=${project.version}</Export-Package>
+                        <Import-Package>
+                        	!de.nierbeck.microservices.karaf.command*,
                             org.apache.felix.service.command,
                             org.apache.karaf.shell.commands,
                             org.apache.karaf.shell.console,
-                            *</Import-Package>
+                            *
+                        </Import-Package>
+                        <Karaf-Commands>de.nierbeck.microservices.karaf.command*</Karaf-Commands>
                     </instructions>
                 </configuration>
             </plugin>
@@ -109,7 +109,7 @@
 				<groupId>de.nierbeck.javaland.tools</groupId>
 				<artifactId>karaf-deployer-maven-plugin</artifactId>
 				<configuration>
-					<url>http://192.168.59.103:8181/jolokia/</url>
+					<url>http://192.168.99.100:8181/jolokia/</url>
 					<jsonInstall>
 						{
 						"type":"EXEC",
